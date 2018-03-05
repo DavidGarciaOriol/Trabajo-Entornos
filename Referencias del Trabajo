@@ -1,0 +1,31 @@
+Clase videoclub:
+ArrayList<Pelicula>
+String nombre;
+
+Clase Pelicula:
+String titulo;
+Fecha fecha;(clase ProyectoFecha)
+Genero genero;
+Director director;
+
+Clase Genero:
+String nombre;
+
+Clase Director:
+String nombre;
+ArrayList<Pelicula>;
+
+Metodos:
+D- Método que si le indicas el género a una película y un director te indique si es o no
+de esa película
+D- Método que te devuelva todas las películas a partir de una fecha.
+M- Método que te devuelva otra película del mismo director y si no existe pues que
+devuelva null.
+D- Método que te indique si el videoclub tiene películas del mismo género de la
+película que se devuelve.
+M- Método que devuelva las películas con un título entre 10 y 15 caracteres.
+M- Método que compara si dos películas son la misma.
+D- Método que calcula los años que lleva una película emitiéndose.
+M- Método que indique si es un videoclub con mucha diversidad : Se considera
+diversa si hay 10 géneros distintos de películas
+
