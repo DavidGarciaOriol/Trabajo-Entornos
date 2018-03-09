@@ -20,6 +20,16 @@ public class VideoclubOnline {
         return nombre;
     }
 
+//Método nº3
+    public Pelicula otraPeliDelDirector(Pelicula pelicula){
+        for (Pelicula peli:peliculas) {
+            if (pelicula.getDirector()==peli.getDirector() && pelicula!=peli)
+                return peli;
+        }
+        return null;
+    }
+
+    //Método nº5
     public ArrayList<Pelicula> tituloLargo(){
         ArrayList<Pelicula> pelisConTituloLargo = new ArrayList<>();
         for (Pelicula p:peliculas) {
@@ -30,11 +40,13 @@ public class VideoclubOnline {
         return pelisConTituloLargo;
     }
 
+//Metodo nº6
     public boolean peliculasIguales(Pelicula p){
         return this.equals(p);
     }
 
-    public boolean hayVariedad(){
+//Método nº10
+   public boolean hayVariedad(){
         ArrayList<Genero> generos = new ArrayList<>();
         for (Pelicula p:peliculas) {
             if (!generos.contains(p.getGenero())){
@@ -44,11 +56,5 @@ public class VideoclubOnline {
         return generos.size() >= 10;
     }
 
-    public Pelicula otraPeliDelDirector(Pelicula pelicula){
-        for (Pelicula peli:peliculas) {
-            if (pelicula.getDirector()==peli.getDirector() && pelicula!=peli)
-                return peli;
-        }
-        return null;
-    }
+
 }

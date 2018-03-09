@@ -4,7 +4,7 @@ public class Pelicula {
     private Genero genero;
     private Fecha fecha;
 
-    public Pelicula(String titulo, Director director, Genero genero,Fecha fecha) {
+    public Pelicula(String titulo, Director director, Genero genero/*,Fecha fecha*/) {
         this.titulo = titulo;
         this.director = director;
         this.genero = genero;

@@ -9,6 +9,8 @@ import java.util.GregorianCalendar;
             super(year,mes,dia,hora,min);
         }
 
+
+
         public Fecha(){
             super();
         }
