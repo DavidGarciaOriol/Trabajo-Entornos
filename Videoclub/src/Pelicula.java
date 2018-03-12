@@ -31,7 +31,7 @@ public class Pelicula {
     @Override
     public String toString() {
         String msg="";
-        msg+="Título: "+getTitulo()+"\n"+"Director: "+getDirector()+"\n"+"Género: "+getGenero()+"\n"+"Fecha: "+getFecha()+"\n";
+        msg+="Título: "+getTitulo()+"\n"+"Director: "+getDirector()+"\n"+"Género: "+getGenero().getGenero()+"\n"+"Fecha: "+getFecha()+"\n";
         return msg;
     }
 }

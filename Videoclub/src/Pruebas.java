@@ -21,7 +21,7 @@ public class Pruebas {
         Director GeorgeLucas = new Director("GeorgeLucas");
         Director Hitctcock = new Director("Hitctcock");
         //PELICULA
-        peliculas = new Pelicula[15];
+        peliculas = new Pelicula[16];
         peliculas[0]= new Pelicula("Poltergeist",Spielberg,Genero.TERROR);
         peliculas[1]= new Pelicula("Psicosis",Hitctcock,Genero.THRILLER);
         peliculas[2]= new Pelicula("Pulp Fiction",Tarantino,Genero.ACCION);
@@ -45,8 +45,22 @@ public class Pruebas {
     }
 
     @Test
-    @DisplayName("Prueba 1: OtraPeliDelDirector")
+    @DisplayName ("Prueba 1: OtraPeliDelDirector")
     void probarOtrasPelis(){
+        Pelicula esperada = videoclub.otraPeliDelDirector(peliculas[0]);
+        assertEquals(peliculas[6],esperada);
+    }
+
+    @Test
+    @DisplayName("Prueba 2: OtraPeliDelDirector")
+    void probarOtrasPelis2(){
+        Pelicula esperada = videoclub.otraPeliDelDirector(peliculas[10]);
+        assertNotEquals(peliculas[1],esperada);
+    }
+
+    @Test
+    @DisplayName("Prueba 3: OtraPeliDelDirector")
+    void probarOtrasPelis3(){
 
     }
 }
