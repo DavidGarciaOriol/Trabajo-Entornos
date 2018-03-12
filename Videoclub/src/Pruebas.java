@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class Pruebas {
-
+/*
     static VideoclubOnline videoclub;
     static Pelicula[] peliculas;
 
@@ -48,5 +48,5 @@ public class Pruebas {
     @DisplayName("Prueba 1: OtraPeliDelDirector")
     void probarOtrasPelis(){
 
-    }
+    }*/
 }

@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 public class Director {
@@ -36,9 +37,6 @@ public class Director {
 
     @Override
     public String toString() {
-        String msg ="";
-        msg+= "Nombre: "+getNombre()+"\n"+"Lista de Películas"+"\n"+listarPeliculas();
-        listarPeliculas();
-        return msg;
+        return getNombre();
     }
 }

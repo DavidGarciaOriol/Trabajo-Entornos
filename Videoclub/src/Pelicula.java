@@ -4,7 +4,7 @@ public class Pelicula {
     private Genero genero;
     private Fecha fecha;
 
-    public Pelicula(String titulo, Director director, Genero genero/*,Fecha fecha*/) {
+    public Pelicula(String titulo, Director director, Genero genero,Fecha fecha) {
         this.titulo = titulo;
         this.director = director;
         this.genero = genero;
@@ -31,7 +31,7 @@ public class Pelicula {
     @Override
     public String toString() {
         String msg="";
-        msg+="Título: "+getTitulo()+"\n"+"Director: "+getDirector()+"\n"+"Género: "+getGenero()+"\n"+"Fecha: "+getFecha()+"\n";
+        msg+="Título: "+getTitulo()+"\n"+"Director: "+getDirector()+"\n"+"Género: "+getGenero().getGenero()+"\n"+"Fecha: "+getFecha()+"\n \n";
         return msg;
     }
 }

@@ -14,8 +14,8 @@ public enum Genero{
         DRAMA("Drama"),
         WESTERN("Western"),
         ACCION("Acción"),
-        ANIMACION("Animación")
-        ;
+        ANIMACION("Animación");
+
         String genero;
          Genero(String gen){
             genero = gen;
