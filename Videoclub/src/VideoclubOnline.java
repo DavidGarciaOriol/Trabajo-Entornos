@@ -34,8 +34,6 @@ public class VideoclubOnline {
 //Método nº2
     public void getPeliFromFecha(Fecha fecha){
 
-        ArrayList<Pelicula> peliculaArrayList = new ArrayList<>();
-
         for(Pelicula pelicula:peliculas){
             if(pelicula.getFecha().compareTo(fecha) >= 0)
                 System.out.println(pelicula);
