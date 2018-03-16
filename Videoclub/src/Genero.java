@@ -1,7 +1,6 @@
 public enum Genero{
         TERROR("Terror"),
         COMEDIA("Comedia"),
-        ROMANCE("Romance"),
         THRILLER("Thriller"),
         POLICIACA("Policiaca"),
         FICCION("Ficción"),

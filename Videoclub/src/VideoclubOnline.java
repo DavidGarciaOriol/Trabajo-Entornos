@@ -21,9 +21,11 @@ public class VideoclubOnline {
         return nombre;
     }
 
+    public void setPeliculas(ArrayList<Pelicula> peliculas) {
+        this.peliculas = peliculas;
+    }
 
-
-//Método nº1
+    //Método nº1
     public void coincidenDirGen(Pelicula pelicula, Genero genero, Director director){
         String out = "El género de " + pelicula.getTitulo() + " ";
         if (pelicula.getGenero() != genero)
@@ -67,18 +69,16 @@ public class VideoclubOnline {
 //Método nº5
     public ArrayList<Pelicula> tituloLargo(){
         ArrayList<Pelicula> pelisConTituloLargo = new ArrayList<>();
-        for (Pelicula p:peliculas) {
-            if (p.getTitulo().length()>=10 && p.getTitulo().length()<=15){
+        for (Pelicula p : peliculas) {
+            if (p.getTitulo().length() >= 10 && p.getTitulo().length() <= 15) {
                 pelisConTituloLargo.add(p);
             }
         }
         return pelisConTituloLargo;
     }
 
-//Metodo nº6
-    public boolean peliculasIguales(Pelicula p){
-        return this.equals(p);
-    }
+//Metodo nº6 pasa a estar en la clase Pelicula
+
 
 //Método nº7
     public int getAntig(Pelicula peli){
