@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class Pruebas {
+public class PruebasM3 {
 
     static VideoclubOnline videoclub;
     static Pelicula[] peliculas;
@@ -105,6 +105,14 @@ public class Pruebas {
         prueba.agregarPelicula(videoclub.getPeliculas().get(3));
         prueba.agregarPelicula(videoclub.getPeliculas().get(5));
         prueba.agregarPelicula(videoclub.getPeliculas().get(6));
+        Pelicula esperada = prueba.otraPeliDelDirector(videoclub.getPeliculas().get(3));
+        assertNull(esperada);
+    }
+
+    @Test
+    @DisplayName("Prueba 5: OtraPeliDelDirector")
+    void probarOtrasPelis5(){
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
         Pelicula esperada = prueba.otraPeliDelDirector(videoclub.getPeliculas().get(3));
         assertNull(esperada);
     }

@@ -45,9 +45,11 @@ public class VideoclubOnline {
 
 //Método nº3
     public Pelicula otraPeliDelDirector(Pelicula pelicula){
-        for (Pelicula peli:peliculas) {
-            if (pelicula.getDirector()==peli.getDirector() && peli!=pelicula)
-                return peli;
+        if (!peliculas.isEmpty()) {
+            for (Pelicula peli : peliculas) {
+                if (pelicula.getDirector() == peli.getDirector() && peli != pelicula)
+                    return peli;
+            }
         }
         return null;
     }
