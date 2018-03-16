@@ -37,8 +37,7 @@ public class Director {
     @Override
     public String toString() {
         String msg ="";
-        msg+= "Nombre: "+getNombre()+"\n"+"Lista de Películas"+"\n"+listarPeliculas();
-        listarPeliculas();
+        msg+= getNombre();
         return msg;
     }
 }

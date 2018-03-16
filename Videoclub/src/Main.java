@@ -1,19 +1,7 @@
-import org.junit.jupiter.api.*;
-
-import java.util.ArrayList;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-public class Pruebas {
-
-    static VideoclubOnline videoclub;
-    static Pelicula[] peliculas;
-
-
-    @BeforeAll
-    static void crearPeliculas(){
+public class Main {
+    public static void main(String[] args) {
         //VIDEOCLUB
-        videoclub = new VideoclubOnline("PacoClub");
+        VideoclubOnline videoclub = new VideoclubOnline("PacoClub");
         //DIRECTORES
         Director Spielberg = new Director("Spielberg");
         Director Tarantino = new Director("Tarantino");
@@ -38,7 +26,7 @@ public class Pruebas {
         Fecha fecha15 = new Fecha(30,8,2010);
         Fecha fecha16 = new Fecha(1,1,2001);
         //PELICULA
-        peliculas = new Pelicula[16];
+        Pelicula[]peliculas = new Pelicula[16];
         peliculas[0]= new Pelicula("Poltergeist",Spielberg,Genero.TERROR,fecha);
         peliculas[1]= new Pelicula("Psicosis",Hitctcock,Genero.THRILLER,fecha2);
         peliculas[2]= new Pelicula("Pulp Fiction",Tarantino,Genero.ACCION,fecha3);
@@ -59,53 +47,6 @@ public class Pruebas {
         for (int i = 0; i < peliculas.length; i++) {
             videoclub.agregarPelicula(peliculas[i]);
         }
-    }
-//PRUEBAS METODO 3
-    @Test
-    @DisplayName ("Prueba 1: OtraPeliDelDirector")
-    void probarOtrasPelis(){
-        VideoclubOnline prueba = new VideoclubOnline("Prueba");
-        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(5));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(6));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(12));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(14));
-        Pelicula esperada = prueba.otraPeliDelDirector(videoclub.getPeliculas().get(2));
-        assertEquals(prueba.getPeliculas().get(4),esperada);
-    }
-
-    @Test
-    @DisplayName("Prueba 2: OtraPeliDelDirector")
-    void probarOtrasPelis2(){
-        VideoclubOnline prueba = new VideoclubOnline("Prueba");
-        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(5));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(6));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(12));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(14));
-        Pelicula esperada = prueba.otraPeliDelDirector(videoclub.getPeliculas().get(2));
-        assertNotEquals(prueba.getPeliculas().get(2),esperada);
-    }
-
-    @Test
-    @DisplayName("Prueba 3: OtraPeliDelDirector")
-    void probarOtrasPelis3(){
-        VideoclubOnline prueba = new VideoclubOnline("Prueba");
-        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(5));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(6));
-        Pelicula esperada = prueba.otraPeliDelDirector(videoclub.getPeliculas().get(10));
-        assertNotNull(esperada);
-    }
-
-    @Test
-    @DisplayName("Prueba 4: OtraPeliDelDirector")
-    void probarOtrasPelis4(){
-        VideoclubOnline prueba = new VideoclubOnline("Prueba");
-        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(5));
-        prueba.agregarPelicula(videoclub.getPeliculas().get(6));
-        Pelicula esperada = prueba.otraPeliDelDirector(videoclub.getPeliculas().get(3));
-        assertNull(esperada);
+        System.out.println(videoclub.otraPeliDelDirector(videoclub.getPeliculas().get(2)));
     }
 }
