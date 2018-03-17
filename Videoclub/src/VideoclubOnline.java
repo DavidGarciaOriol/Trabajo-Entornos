@@ -32,12 +32,14 @@ public class VideoclubOnline {
     }
 
 //Método nº2
-    public void getPeliFromFecha(Fecha fecha){
+    public ArrayList<Pelicula> getPeliFromFecha(Fecha fecha){
+
+        ArrayList<Pelicula>pelisFF = new ArrayList<>();
 
         for(Pelicula pelicula:peliculas){
             if(pelicula.getFecha().compareTo(fecha) >= 0)
-                System.out.println(pelicula);
-        }
+                pelisFF.add(pelicula);
+        } return pelisFF;
     }
 
 //Método nº3
@@ -52,7 +54,7 @@ public class VideoclubOnline {
 //Método nº4
     public boolean peliSameGenre(Pelicula pelicula){
         for (Pelicula pelicula1:peliculas){
-            if (pelicula.getGenero().equals(pelicula1.getGenero()) && pelicula.getTitulo() != pelicula1.getTitulo()){
+            if (pelicula.getGenero() == pelicula1.getGenero() && pelicula != pelicula1){
                 System.out.println(pelicula1);
                 return true;
             }
@@ -70,10 +72,6 @@ public class VideoclubOnline {
         return pelisConTituloLargo;
     }
 
-//Metodo nº6
-    public boolean peliculasIguales(Pelicula p){
-        return this.equals(p);
-    }
 
 //Método nº7
     public int getAntig(Pelicula peli){
@@ -81,7 +79,7 @@ public class VideoclubOnline {
         return (fecha.get(Calendar.YEAR) - peli.getFecha().get(Calendar.YEAR));
     }
 
-//Método nº10
+//Método nº8
     public boolean hayVariedad(){
         ArrayList<Genero> generos = new ArrayList<>();
         for (Pelicula p:peliculas) {
