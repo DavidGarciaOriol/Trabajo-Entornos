@@ -37,7 +37,7 @@ public class VideoclubOnline {
         String out = "El género de " + pelicula.getTitulo() + " ";
         if (pelicula.getGenero() != genero)
             out += "no ";
-        out += "coincide con el especificado. \nEl director de "+ pelicula.getTitulo() + " ";
+        out += "coincide con el especificado.\nEl director de "+ pelicula.getTitulo() + " ";
         if (pelicula.getDirector().getNombre() != director.getNombre())
             out += "no ";
         out += "coincide con el especificado.";
