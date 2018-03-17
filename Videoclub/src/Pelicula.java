@@ -40,6 +40,10 @@ public class Pelicula {
         return fecha;
     }
 
+
+/*METODO 6
+* Este método compara dos peliculas y devuelve true si lo son.
+* @author Miguel Angel Valiente*/
     public boolean sonIguales(Pelicula p){
         return this.pelisIguales(p);
     }

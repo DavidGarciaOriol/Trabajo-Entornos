@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class PruebasM6 {
-    
+
     @Test
     @DisplayName("Prueba 1: sonIguales")//Ambas pelis son iguales.
     void sonIguales1(){
