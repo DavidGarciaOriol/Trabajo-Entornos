@@ -66,8 +66,12 @@ public class AllTests {
 
     @Test
     @DisplayName("Prueba 1: CoincidenDirGen")
-    void probarCoincidenDirGen(){
+    void probarCoincidenDirGen1(){
+        Director Spielberg = new Director("Spielberg");
         Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
 
         VideoclubOnline prueba = new VideoclubOnline("Prueba");
 
@@ -76,33 +80,297 @@ public class AllTests {
         prueba.agregarPelicula(videoclub.getPeliculas().get(3));
         prueba.agregarPelicula(videoclub.getPeliculas().get(4));
 
+        assertEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.ACCION,Tarantino));
     }
 
-    @Test
+        @Test
     @DisplayName("Prueba 2: CoincidenDirGen")
     void probarCoincidenDirGen2(){
-        VideoclubOnline prueba = new VideoclubOnline("Prueba");
-        prueba.agregarPelicula(videoclub.getPeliculas().get(6));
+            Director Spielberg = new Director("Spielberg");
+            Director Tarantino = new Director("Tarantino");
+            Director Nolan = new Director("Nolan");
+            Director GeorgeLucas = new Director("GeorgeLucas");
+            Director Hitctcock = new Director("Hitctcock");
 
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.THRILLER,Hitctcock));
     }
 
     @Test
     @DisplayName("Prueba 3: CoincidenDirGen")
     void probarCoincidenDirGen3(){
-        VideoclubOnline prueba = new VideoclubOnline("Prueba");
-        prueba.agregarPelicula(videoclub.getPeliculas().get(6));
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
 
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.ACCION,Hitctcock));
     }
 
     @Test
     @DisplayName("Prueba 4: CoincidenDirGen")
     void probarCoincidenDirGen4(){
-        VideoclubOnline prueba = new VideoclubOnline("Prueba");
-        prueba.agregarPelicula(videoclub.getPeliculas().get(6));
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
 
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.THRILLER,Tarantino));
     }
 
-    /*=====================================================*/
+    @Test
+    @DisplayName("Prueba 5: CoincidenDirGen")
+    void probarCoincidenDirGen5(){
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.ACCION,Tarantino));
+    }
+
+        @Test
+    @DisplayName("Prueba 6: CoincidenDirGen")
+    void probarCoincidenDirGen6(){
+            Director Spielberg = new Director("Spielberg");
+            Director Tarantino = new Director("Tarantino");
+            Director Nolan = new Director("Nolan");
+            Director GeorgeLucas = new Director("GeorgeLucas");
+            Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.THRILLER,Hitctcock));
+    }
+
+    @Test
+    @DisplayName("Prueba 7: CoincidenDirGen")
+    void probarCoincidenDirGen7(){
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.ACCION,Hitctcock));
+    }
+
+    @Test
+    @DisplayName("Prueba 8: CoincidenDirGen")
+    void probarCoincidenDirGen8(){
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.THRILLER,Tarantino));
+    }
+
+    @Test
+    @DisplayName("Prueba 9: CoincidenDirGen")
+    void probarCoincidenDirGen9(){
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.ACCION,Tarantino));
+    }
+
+        @Test
+    @DisplayName("Prueba 10: CoincidenDirGen")
+    void probarCoincidenDirGen10(){
+            Director Spielberg = new Director("Spielberg");
+            Director Tarantino = new Director("Tarantino");
+            Director Nolan = new Director("Nolan");
+            Director GeorgeLucas = new Director("GeorgeLucas");
+            Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.THRILLER,Hitctcock));
+    }
+
+    @Test
+    @DisplayName("Prueba 11: CoincidenDirGen")
+    void probarCoincidenDirGen11(){
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.ACCION,Hitctcock));
+    }
+
+    @Test
+    @DisplayName("Prueba 12: CoincidenDirGen")
+    void probarCoincidenDirGen12(){
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " no coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.THRILLER,Tarantino));
+    }
+
+    @Test
+    @DisplayName("Prueba 13: CoincidenDirGen")
+    void probarCoincidenDirGen13(){
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.ACCION,Tarantino));
+    }
+
+    @Test
+    @DisplayName("Prueba 14: CoincidenDirGen")
+    void probarCoincidenDirGen14(){
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.THRILLER,Hitctcock));
+    }
+
+    @Test
+    @DisplayName("Prueba 15: CoincidenDirGen")
+    void probarCoincidenDirGen15(){
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.ACCION,Hitctcock));
+    }
+
+    @Test
+    @DisplayName("Prueba 16: CoincidenDirGen")
+    void probarCoincidenDirGen16(){
+        Director Spielberg = new Director("Spielberg");
+        Director Tarantino = new Director("Tarantino");
+        Director Nolan = new Director("Nolan");
+        Director GeorgeLucas = new Director("GeorgeLucas");
+        Director Hitctcock = new Director("Hitctcock");
+
+        VideoclubOnline prueba = new VideoclubOnline("Prueba");
+
+        prueba.agregarPelicula(videoclub.getPeliculas().get(1));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(2));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(3));
+        prueba.agregarPelicula(videoclub.getPeliculas().get(4));
+
+        assertNotEquals("El género de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.\nEl director de " + prueba.getPeliculas().get(0).getTitulo() + " coincide con el especificado.", prueba.coincidenDirGen((prueba.getPeliculas().get(0)),Genero.THRILLER,Tarantino));
+    }
+
+
+
+    /*=========================Pruebas Método 2============================*/
 
     @Test
     @DisplayName("Prueba 1: getPeliFromFecha")
@@ -166,7 +434,7 @@ public class AllTests {
         assertNotEquals(pelisFF,prueba.getPeliFromFecha(fecha));
     }
 
-    /*======================================================*/
+    /*=========================Pruebas Método 4============================*/
 
     @Test
     @DisplayName("Prueba 1: PelisSameGenre")
@@ -207,7 +475,7 @@ public class AllTests {
 
     }
 
-    /*=====================================================*/
+    /*=========================Pruebas Método 7============================*/
 
     @Test
     @DisplayName("Prueba 1: getAntig")

@@ -22,13 +22,13 @@ public class VideoclubOnline {
     }
 
 //Método nº1
-    public void coincidenDirGen(Pelicula pelicula, Genero genero, Director director){
+    public String coincidenDirGen(Pelicula pelicula, Genero genero, Director director){
         String out = "El género de " + pelicula.getTitulo() + " ";
         if (pelicula.getGenero() != genero) out += "no ";
-        out += "coincide con el especificado. \nEl director de "+ pelicula.getTitulo() + " ";
+        out += "coincide con el especificado.\nEl director de "+ pelicula.getTitulo() + " ";
         if (pelicula.getDirector().getNombre() != director.getNombre()) out += "no ";
         out += "coincide con el especificado.";
-        System.out.println(out);
+        return out;
     }
 
 //Método nº2
