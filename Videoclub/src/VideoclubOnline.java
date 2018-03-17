@@ -21,7 +21,16 @@ public class VideoclubOnline {
         return nombre;
     }
 
-//Método nº1
+
+    /**
+     * Method 1
+     * @author David
+     * @param pelicula
+     * @param genero
+     * @param director
+     * El método te devuelve la confirmación dependiendo de si coinciden o no el género y director especificados con los de la película dada.
+     */
+
     public String coincidenDirGen(Pelicula pelicula, Genero genero, Director director){
         String out = "El género de " + pelicula.getTitulo() + " ";
         if (pelicula.getGenero() != genero) out += "no ";
@@ -31,7 +40,14 @@ public class VideoclubOnline {
         return out;
     }
 
-//Método nº2
+
+    /**
+     * Method 2
+     * @author David
+     * @param fecha
+     * El género te lista un array de películas cuya fecha sea igual o superior a la especificada y te lo devuelve.
+     */
+
     public ArrayList<Pelicula> getPeliFromFecha(Fecha fecha){
 
         ArrayList<Pelicula>pelisFF = new ArrayList<>();
@@ -51,7 +67,13 @@ public class VideoclubOnline {
         return null;
     }
 
-//Método nº4
+    /**
+     * Method: 4
+     *@author David
+     * @param pelicula
+     * El método te busca en el vídeoclub una película (la más próxima) con el mismo género que la especificada.
+     */
+
     public boolean peliSameGenre(Pelicula pelicula){
         for (Pelicula pelicula1:peliculas){
             if (pelicula.getGenero() == pelicula1.getGenero() && pelicula != pelicula1){
@@ -73,7 +95,13 @@ public class VideoclubOnline {
     }
 
 
-//Método nº7
+    /**
+     * Method 7
+     * @author David
+     * @param peli
+     * El método te devuelve la antiguedad de la película en años.
+     */
+
     public int getAntig(Pelicula peli){
         Fecha fecha = new Fecha();
         return (fecha.get(Calendar.YEAR) - peli.getFecha().get(Calendar.YEAR));
