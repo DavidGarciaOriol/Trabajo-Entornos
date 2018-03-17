@@ -30,15 +30,10 @@ public class Director {
      return pelis;
     }
 
-    public Pelicula otraPelicula(){
-        return peliculas.get((int)(Math.random() * peliculas.size()));
-    }
-
     @Override
     public String toString() {
         String msg ="";
-        msg+= "Nombre: "+getNombre()+"\n"+"Lista de Películas"+"\n"+listarPeliculas();
-        listarPeliculas();
+        msg+= getNombre();
         return msg;
     }
 }
