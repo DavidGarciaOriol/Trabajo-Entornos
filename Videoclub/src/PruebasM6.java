@@ -1,12 +1,9 @@
 import org.junit.jupiter.api.*;
-
-import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.Iterator;
+
 
 public class PruebasM6 {
-
+    
     @Test
     @DisplayName("Prueba 1: sonIguales")//Ambas pelis son iguales.
     void sonIguales1(){
