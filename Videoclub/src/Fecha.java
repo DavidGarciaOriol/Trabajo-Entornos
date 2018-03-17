@@ -20,4 +20,3 @@ import java.util.GregorianCalendar;
             return this.getTime().toString();
         }
     }
-/* Metodo  de pelicula*/
